@@ -1,16 +1,36 @@
-<h1>Customers</h1>
+<div class="container">
+	<div class="row">
+		<h1>Customers and Pets</h1>
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-2">
+			<nav class="nav flex-column">
+				<%= link_to 'Rearrange Pets', randomize_pets_path %>
+				<a class="nav-link" href="#">Link</a>
+				<a class="nav-link" href="#">Link</a>
+				<a class="nav-link disabled" href="#">Disabled</a>
+			</nav>
+		</div>
 
-<% @customers.each do |customer| %>
-	<h3><%= customer.name %></h3>
-	<p>email: <%= customer.email %></p>
-	<p>city: <%= customer.city %></p>
-	<% if customer.pets %>
-		<p>pet(s):</p>
-		<ul>
-		<% customer.pets.each do |pet| %>
-			<li><%= pet.name %></li>
-			<% end %>
-			</ul>
-			<% end %>
-			<hr />
-	<% end %>
+		<div class="col-lg-9">
+			<div class="row">
+				<% @customers.each do |customer| %>
+					<div class="col-lg-3	customer">
+						<h3><%= customer.name %></h3>
+						<p>email: <%= customer.email %></p>
+						<p>city: <%= customer.city %></p>
+						<% if customer.pets %>
+							<p>pet(s):</p>
+							<ul>
+							<% customer.pets.each do |pet| %>
+								<li><%= pet.name %></li>
+							<% end %>
+							</ul>
+						<% end %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
