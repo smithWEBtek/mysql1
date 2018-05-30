@@ -1,0 +1,8 @@
+<h1>Customers</h1>
+
+<% @customers.each do |customer| %>
+	<p><%= customer.name %></p>
+	<p><%= customer.email %></p>
+	<p><%= customer.city %></p>
+<hr />
+	<% end %>
