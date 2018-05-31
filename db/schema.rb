@@ -16,15 +16,11 @@ ActiveRecord::Schema.define(version: 2018_05_30_195339) do
     t.string "name"
     t.string "email"
     t.string "city"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "pets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.integer "customer_id", default: 1
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end
